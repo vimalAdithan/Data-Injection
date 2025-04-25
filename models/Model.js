@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const ProductSchema = new mongoose.Schema({
-  productId: String,
+  productId: { type: String, unique: true },
   name: String,
   category: String,
   unitPrice: Number,
@@ -9,7 +9,7 @@ const ProductSchema = new mongoose.Schema({
 export const ProductModel = mongoose.model("product", ProductSchema);
 
 const CustomerSchema = new mongoose.Schema({
-  customerId: String,
+  customerId: { type: String, unique: true },
   name: String,
   email: String,
   address: String,
@@ -17,7 +17,7 @@ const CustomerSchema = new mongoose.Schema({
 export const CustomerModel = mongoose.model("customer", CustomerSchema);
 
 const OrderSchema = new mongoose.Schema({
-  orderId: String,
+  orderId: { type: String, unique: true },
   productId: String,
   customerId: String,
   region: String,

@@ -27,3 +27,4 @@ Thumbs.db          # Windows
 .env               # Sensitive environment variables
 .env.local         # Local environment variables
 .env.
+.env
